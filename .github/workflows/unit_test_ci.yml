@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: action/checkout@v5
+        uses: actions/checkout@v5
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -21,4 +21,4 @@ jobs:
       - name: Test with pytest
         run: |
           pip install pytest
-          pytest
+          python3 -m pytest
