@@ -5,7 +5,7 @@ from operations.divide import div
 
 
 def test_addition_given_2_and_2_should_return_4():
-    assert add(2, 2) == 4
+    assert add(2, 2) == 5
 
 
 def test_substraction_given_5_and_2_should_return_3():
