@@ -1,2 +1,2 @@
-def addition(a: int, b: int):
+def mult(a: int, b: int):
     return a * b
