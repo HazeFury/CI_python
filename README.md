@@ -49,27 +49,27 @@ Les fichiers de tests doivent se trouver dans le dossier `tests/` et leurs noms 
 Le workflow suivant déclenche les tests à chaque Pull Request vers la branche `main`. Il simule un environnement Ubuntu, installe les dépendances et lance Pytest.
 
 ```yml
-	# Contenu de .github/workflows/unit_test_ci.yml
-	name: Unit test - CI
-	on:
-	  pull_request:
-	    branches: [main]
+# Contenu de .github/workflows/unit_test_ci.yml
+name: Unit test - CI
+on:
+  pull_request:
+    branches: [main]
 
-	jobs:
-	  operations_testing:
-	    runs-on: ubuntu-latest
-	    steps:
-	      - uses: actions/checkout@v5
-	      - name: Set up Python
-	        uses: actions/setup-python@v5
-	        with:
-	          python-version: '3.10'
-	      - name: Install Pytest
-	        run: |
-	          python -m pip install --upgrade pip
-	          pip install pytest
-	      - name: Run Tests
-	        run: python3 -m pytest
+jobs:
+  operations_testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install Pytest
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+      - name: Run Tests
+        run: python3 -m pytest
 ```
 
 ## 6. Astuces & Bonnes Pratiques
